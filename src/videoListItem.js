@@ -10,9 +10,9 @@ class VideoListItem extends Component{
 
     return(
         <li>
-          <h4>{video.snippet.title}</h4>;
-          <img src={video.snippet.thumbnails.default.url} alt={video.snippet.title} />;
-          <p>{video.snippet.description}</p>;
+          <h4>{video.snippet.title}</h4>
+          <img src={video.snippet.thumbnails.default.url} alt={video.snippet.title} />
+          <p>{video.snippet.description}</p>
         </li>
     );
   }
