@@ -36,7 +36,7 @@ class App extends Component {
 
         <header className="App-header">
           <nav className="navigation">
-            <img className='logo' src={logo} alt="logo" />
+            <a href='/'><img className='logo' src={logo} alt="logo" /></a>
             <form className='searchBox'>
               <input className="searchForm" type="search" placeholder=" Search on youtube" aria-label="Search" />
               <button className="searchButton" type="submit">Search</button>
