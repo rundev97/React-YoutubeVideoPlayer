@@ -23,6 +23,8 @@ class App extends Component {
       this.setState({videos: data});
       console.log('===========State===============');
       console.log(this.state.videos);
+      console.log('===========State===============');
+      console.log(this.state.term);
 
     } )
 
