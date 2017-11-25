@@ -3,6 +3,7 @@ import logo from './youtube.jpg';
 import './App.css';
 import YoutubeApiSearch from 'youtube-api-search';
 import VideoList from './videoList';
+import SearchForm from './searchForm';
 
 
 class App extends Component {
@@ -37,10 +38,7 @@ class App extends Component {
         <header className="App-header">
           <nav className="navigation">
             <a href='/'><img className='logo' src={logo} alt="logo" /></a>
-            <form className='searchBox'>
-              <input className="searchForm" type="search" placeholder=" Search on youtube" aria-label="Search" />
-              <button className="searchButton" type="submit">Search</button>
-            </form>
+            <SearchForm />
           </nav>
         </header>
 
