@@ -5,15 +5,14 @@ class SearchForm extends Component{
   constructor(props){
     super(props);
 
-    this.state = { term: ''}
+    this.state = { term: 'madona'}
   }
 
   render(){
     return(
       <div>
         <form className='searchBox'>
-          <input value = {this.state.term} className="searchForm" type="search" placeholder=" Search on youtube" aria-label="Search" onChange={ event => this.setState({term: event.target.value})}/>
-          {console.log(this.state.term)}
+          <input value = '' className="searchForm" type="search" placeholder=" Search on youtube" aria-label="Search" )}/>
           <button className="searchButton" type="submit">Search</button>
         </form>
       </div>

@@ -17,14 +17,13 @@ class App extends Component {
     console.log(this.state);
 
     const API_KEY = 'AIzaSyC8lT8WnUx5bY8NSIKDaLLd5foR5Oue7qY';
-    YoutubeApiSearch({key: API_KEY, term: this.state.term}, data => {
+    YoutubeApiSearch({key: API_KEY, term: 'madona'}, data => {
       console.log('===========Fetched Data===============');
       console.log(data);
       this.setState({videos: data});
       console.log('===========State===============');
       console.log(this.state.videos);
-      console.log('===========State===============');
-      console.log(this.state.term);
+
 
     } )
 
@@ -38,7 +37,7 @@ class App extends Component {
         <header className="App-header">
           <nav className="navigation">
             <a href='/'><img className='logo' src={logo} alt="logo" /></a>
-            <SearchForm />
+            
           </nav>
         </header>
 
