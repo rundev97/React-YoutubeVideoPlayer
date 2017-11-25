@@ -4,10 +4,7 @@
   background-color: #f8f8f8;
 }
 
-.container{
-  width: 65%;
-  margin: auto;
-}
+
 
 
 /* Navigation bar */
@@ -23,6 +20,7 @@
   width: 100%;
   height: 55px;
   background-color: white;
+  margin-bottom: 20px;
 }
 
 .searchBox{
@@ -47,4 +45,19 @@
   border-radius: 5px;
   outline: none;
   border: 1px solid #dfdfdf;
+}
+
+li {
+  list-style: none;
+}
+
+
+li img{
+  float: left;
+  margin-right: 20px;
+}
+
+
+.videoListItem{
+  min-height: 160px;
 }

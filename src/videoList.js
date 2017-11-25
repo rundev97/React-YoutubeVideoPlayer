@@ -11,9 +11,11 @@ class VideoList extends Component{
     );
 
     return(
-      <ul>
-        {videos}
-      </ul>
+      <div className='col-md-4'>
+        <ul>
+          {videos}
+        </ul>
+      </div>
 
     );
   }

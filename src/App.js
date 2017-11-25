@@ -4,6 +4,7 @@ import './App.css';
 import YoutubeApiSearch from 'youtube-api-search';
 import VideoList from './videoList';
 import SearchForm from './searchForm';
+import VideoDetail from './videoDetail';
 
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
     console.log(this.state);
 
     const API_KEY = 'AIzaSyC8lT8WnUx5bY8NSIKDaLLd5foR5Oue7qY';
-    YoutubeApiSearch({key: API_KEY, term:'quebec'}, data => {
+    YoutubeApiSearch({key: API_KEY, term:'coldplay'}, data => {
       console.log('===========Fetched Data===============');
       console.log(data);
       this.setState({videos: data});
@@ -34,7 +35,6 @@ class App extends Component {
 
     return (
       <div className="App">
-
         <header className="App-header">
           <nav className="navigation">
             <a href='/'><img className='logo' src={logo} alt="logo" /></a>
@@ -43,7 +43,11 @@ class App extends Component {
         </header>
 
         <div className='container'>
-          <VideoList videos={this.state.videos}/>
+          <div className='row'>
+            <VideoDetail />
+            <VideoList  videos={this.state.videos}/>
+
+          </div>
         </div>
 
 
