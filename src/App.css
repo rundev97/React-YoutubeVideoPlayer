@@ -34,11 +34,9 @@
 
 .searchForm{
   width: 300px;
-  height: 30px;
+  height: 28px;
   -webkit-appearance:none; /* important to style search form height*/
   border: 1px solid #efefef;
-  outline: none;
-  border-radius: 5px;
 
 }
 

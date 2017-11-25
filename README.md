@@ -1,1 +1,1 @@
-A Simple youtube App with React JS, JSX, HTML, CSS and Google Youtube Api.
+A Simple youtube App with React JS and youtube Api.
