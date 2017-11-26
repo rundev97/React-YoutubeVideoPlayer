@@ -1,12 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class VideoListItem extends Component{
+const VideoListItem = (props) => {
 
-  render(){
-
-    const video = this.props.video;
+    const video = props.videoItem;
     console.log('======= videoItem =======');
     console.log(video);
+
 
     return(
         <li>
@@ -17,8 +16,8 @@ class VideoListItem extends Component{
           </div>
         </li>
     );
-  }
-}
+
+};
 
 
 export default VideoListItem;

@@ -12,16 +12,28 @@ class App extends Component {
   constructor(props){
     super(props);
 
-    this.state = { videos: [] };
+    this.state = {
+      videos: [],
+      selectedVideo: null
+    };
 
     console.log('===========Initial state===============');
     console.log(this.state);
 
+
     const API_KEY = 'AIzaSyC8lT8WnUx5bY8NSIKDaLLd5foR5Oue7qY';
+
     YoutubeApiSearch({key: API_KEY, term:'coldplay'}, data => {
       console.log('===========Fetched Data===============');
       console.log(data);
-      this.setState({videos: data});
+
+      this.setState(
+        {
+          videos: data,
+          selectedVideo: data[0]
+        }
+      );
+
       console.log('===========State===============');
       console.log(this.state.videos);
 
@@ -44,14 +56,12 @@ class App extends Component {
 
         <div className='container'>
           <div className='row'>
-            <VideoDetail />
+            <VideoDetail video={this.state.selectedVideo}/>
             <VideoList  videos={this.state.videos}/>
 
           </div>
         </div>
-
-
-
+        
       </div>
     );
   }
