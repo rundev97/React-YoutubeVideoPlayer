@@ -22,11 +22,8 @@ class SearchForm extends Component{
   }
 
   onInputChange(term){
-
     this.setState({ term: term});
     this.props.onSearchTermChange(term);
-
-
   }
 
 }

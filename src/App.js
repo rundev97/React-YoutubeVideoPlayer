@@ -5,6 +5,7 @@ import YoutubeApiSearch from 'youtube-api-search';
 import VideoList from './videoList';
 import SearchForm from './searchForm';
 import VideoDetail from './videoDetail';
+import _ from 'lodash';
 
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
   videoSearch(term){
 
     const API_KEY = 'AIzaSyC8lT8WnUx5bY8NSIKDaLLd5foR5Oue7qY';
-
+    // Search with youtube Api
     YoutubeApiSearch({key: API_KEY, term: term}, data => {
       console.log('===========Fetched Data===============');
       console.log(data);
@@ -36,30 +37,32 @@ class App extends Component {
         }
       );
 
-      console.log('===========State===============');
-      console.log(this.state.videos);
-
     });
-
-
   }
 
 
   render() {
 
+    // Use loadash to call the methode every 300ms instead after each new letter type in the form
+    const videoSearch = _.debounce( (term) => {this.videoSearch(term)}, 300);
+
+
     return (
       <div className="App">
+
         <header className="App-header">
           <nav className="navigation">
             <a href='/'><img className='logo' src={logo} alt="logo" /></a>
-            <SearchForm onSearchTermChange={ term => this.videoSearch(term) }/>
+            <SearchForm onSearchTermChange={videoSearch}/>
           </nav>
         </header>
 
         <div className='container'>
           <div className='row'>
 
-            <VideoDetail video={this.state.selectedVideo}/>
+            <VideoDetail
+              video={this.state.selectedVideo}
+            />
 
             <VideoList
               videos={this.state.videos}

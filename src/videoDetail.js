@@ -8,9 +8,6 @@ const VideoDetail = ({video}) => {
     );
   }
 
-  console.log('***********');
-  console.log(video);
-
   const videoId = video.id.videoId;
   const url = `https://www.youtube.com/embed/${videoId}`;
 
@@ -21,9 +18,6 @@ const VideoDetail = ({video}) => {
       </div>
       <h3> {video.snippet.title} </h3>
       <p style={{marginBottom: '50px'}}> {video.snippet.description}</p>
-
-
-
     </div>
 
   );
