@@ -16,14 +16,16 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     };
+    // calling videoSearch function with an initil value
+    this.videoSearch('coldplay');
+  }
 
-    console.log('===========Initial state===============');
-    console.log(this.state);
 
+  videoSearch(term){
 
     const API_KEY = 'AIzaSyC8lT8WnUx5bY8NSIKDaLLd5foR5Oue7qY';
 
-    YoutubeApiSearch({key: API_KEY, term:'coldplay'}, data => {
+    YoutubeApiSearch({key: API_KEY, term: term}, data => {
       console.log('===========Fetched Data===============');
       console.log(data);
 
@@ -37,10 +39,10 @@ class App extends Component {
       console.log('===========State===============');
       console.log(this.state.videos);
 
-    } )
+    });
+
 
   }
-
 
 
   render() {
@@ -50,7 +52,7 @@ class App extends Component {
         <header className="App-header">
           <nav className="navigation">
             <a href='/'><img className='logo' src={logo} alt="logo" /></a>
-            <SearchForm />
+            <SearchForm onSearchTermChange={ term => this.videoSearch(term) }/>
           </nav>
         </header>
 
