@@ -14,8 +14,9 @@ class SearchForm extends Component{
   render(){
     return(
       <form className='searchBox'>
-        <input className="searchForm" type="search" placeholder=" Search on youtube" value={this.state.term} onChange={event => this.onInputChange(event.target.value)} />
-        <button className="searchButton" type="submit">Search</button>
+        <input className="searchForm" type="search" placeholder=" Search on youtube" />
+        <button className="searchButton" type="submit" onClick={ event =>  this.onInputChange(event.target.value) }>Search</button>
+
       </form>
 
     )

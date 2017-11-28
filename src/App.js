@@ -43,8 +43,8 @@ class App extends Component {
 
   render() {
 
-    // Use loadash to call the methode every 300ms instead after each new letter type in the form
-    const videoSearch = _.debounce( (term) => {this.videoSearch(term)}, 300);
+    // Use loadash to call the methode every 300ms instead of after each new letter type in the form.
+    // const videoSearch = _.debounce( (term) => {this.videoSearch(term)}, 100);
 
 
     return (
@@ -53,7 +53,7 @@ class App extends Component {
         <header className="App-header">
           <nav className="navigation">
             <a href='/'><img className='logo' src={logo} alt="logo" /></a>
-            <SearchForm onSearchTermChange={videoSearch}/>
+            <SearchForm onSearchTermChange={term => this.videoSearch(term)}/>
           </nav>
         </header>
 
