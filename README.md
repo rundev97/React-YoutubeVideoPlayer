@@ -1,1 +1,2 @@
-A Simple youtube App with React JS and youtube Api.
+# Youtube App
+A simple youtube App made with React JS, JSX, ES6, Bootstrap, loDash, Html, Css and youtube Api.

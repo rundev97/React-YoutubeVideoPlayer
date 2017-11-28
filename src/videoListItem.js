@@ -4,9 +4,6 @@ const VideoListItem = (props) => {
 
     const video = props.videoItem;
     const onSelectedVideo = props.onSelectedVideo;
-    console.log('======= videoItem =======');
-    console.log(video);
-
 
     return(
         <li onClick = { () => onSelectedVideo(video)}>

@@ -17,7 +17,7 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     };
-    // calling videoSearch function with an initil value
+    // calling videoSearch function with an initial value
     this.videoSearch('coldplay');
   }
 
